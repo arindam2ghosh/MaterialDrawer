@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.nLiveo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/nliveo_blue_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/nliveo_blue_alpha_colorPrimaryDark</item>
+
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Theme.nLiveo" parent="AppTheme.nLiveo" />
+
+    <style name="AppTheme.nLiveo.MaterialRippleLayout">
+        <item name="mrl_rippleAlpha">0.2</item>
+        <item name="mrl_rippleColor">@color/nliveo_divider</item>
+        <item name="mrl_rippleDelayClick">true</item>
+        <item name="mrl_rippleHover">true</item>
+        <item name="mrl_rippleOverlay">true</item>
+    </style>
+</resources>
