@@ -65,7 +65,7 @@ public class MainActivity extends NavigationArin implements OnItemClickListener 
                 //.colorLineSeparator(R.color.nliveo_green_colorPrimaryDark)
 
                 //.removeFooter()
-                .footerItem(R.string.settings, R.drawable.ic_settings_black_24dp)
+                .footerItem(R.string.settings, new IconDrawable(this, MaterialIcons.md_access_alarm).colorRes(R.color.nliveo_black))
 
                 //{optional} - Second footer
                 //.footerSecondItem(R.string.settings, R.drawable.ic_settings_black_24dp)

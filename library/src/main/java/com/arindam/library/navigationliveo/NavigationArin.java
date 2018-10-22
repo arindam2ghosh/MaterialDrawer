@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.internal.ScrimInsetsFrameLayout;
@@ -646,7 +647,51 @@ public abstract class NavigationArin extends AppCompatActivity {
         }
 
         return this;
+    }
+
+
+    public NavigationArin footerItem(int title, Drawable icon){
+
+        if (title == 0){
+            throw new RuntimeException(getString(R.string.title_null_or_empty));
+        }
+
+        mTitleFooter.setText(getString(title));
+
+        if (icon == null){
+            mIconFooter.setVisibility(View.GONE);
+        }else{
+            mIconFooter.setImageDrawable(icon);
+        }
+
+        if (mColorDefault > 0){
+            footerNameColor(mColorDefault);
+            footerIconColor(mColorDefault);
+        }
+
+        return this;
     };
+
+    public NavigationArin footerItem(String title, Drawable icon){
+
+        if (title == null){
+            throw new RuntimeException(getString(R.string.title_null_or_empty));
+        }
+
+        if (title.trim().equals("")){
+            throw new RuntimeException(getString(R.string.title_null_or_empty));
+        }
+
+        mTitleFooter.setText(title);
+
+        if (icon == null){
+            mIconFooter.setVisibility(View.GONE);
+        }else{
+            mIconFooter.setImageDrawable(icon);
+        }
+
+        return this;
+    }
 
     /**
      * Information footer second list item
